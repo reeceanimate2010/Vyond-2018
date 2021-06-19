@@ -320,7 +320,7 @@ module.exports = function (req, res, url) {
 			break;
 		}
 		
-				case "/player": {
+		case "/player": {
 			title = "Preview Your Video - Vyond";
 			attrs = {
 				data: process.env.SWF_URL + "/player.swf",
