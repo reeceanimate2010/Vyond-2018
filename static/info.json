@@ -38,6 +38,16 @@
 				"Content-Type": "text/html; charset=UTF-8"
 			}
 		},
+		"videomaker/quickvideo/(.*)": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
+		"videomaker/full/(.*)": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
 		"videomaker(.*)": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
