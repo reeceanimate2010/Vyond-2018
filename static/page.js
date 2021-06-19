@@ -38,29 +38,37 @@ module.exports = function (req, res, url) {
 			attrs = {
 				data: process.env.SWF_URL + "/cc.swf", // data: 'cc.swf',
 				type: "application/x-shockwave-flash",
+				
 				id: "char_creator",
-				width: "100%",
-				height: "100%",
+                                swf: process.env.SWF_URL + "/cc.swf",
+                                height: 600,
+                                width: 960,
+
+                                align: "middle",
+                                allowScriptAccess: "always",
+                                allowFullScreen: "true",
+                                wmode: "transparent",
+
+                                hasVersion: "10.3",
 			};
 			params = {
 				flashvars: {
-					apiserver: "/",
+                                        apiserver: "/",
+					m_mode: "school",
+					bs: "adam",
+					isLogin: "Y",
+					isEmbed: "0",
+					ctc: "go",
+					tlang: "en_US",
 					storePath: process.env.STORE_URL + "/<store>",
 					clientThemePath: process.env.CLIENT_URL + "/<client_theme>",
-					original_asset_id: query["id"] || null,
-					themeId: "business",
-					ut: 60,
-					bs: "default",
 					appCode: "go",
 					page: "",
 					siteId: "go",
-					m_mode: "school",
-					isLogin: "Y",
-					isEmbed: 1,
-					ctc: "go",
-					tlang: "en_US",
-				},
-				allowScriptAccess: "always",
+					userId: "00EDZP3Cu0aw",
+					themeId: "family",
+					ut: 30},
+				
 				movie: process.env.SWF_URL + "/cc.swf", // 'http://localhost/cc.swf'
 			};
 			break;
@@ -174,6 +182,8 @@ module.exports = function (req, res, url) {
 			                isWide: 1,
 			                newusr: 1,
 			                goteam_draft_only: 0},
+				
+				movie: process.env.SWF_URL + "/go_full.swf", // 'http://localhost/go_full.swf'
 			};
 			break;
 		}
@@ -241,6 +251,8 @@ module.exports = function (req, res, url) {
 					isWide: 0,
 					pwm: 1,
 					s3base: "https:\/\/s3.amazonaws.com\/fs.goanimate.com\/,https:\/\/assets.vyond.com\/"},
+				
+				movie: process.env.SWF_URL + "/player.swf", // 'http://localhost/player.swf'
 			};
 			break;
 		}
