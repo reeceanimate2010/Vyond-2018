@@ -43,6 +43,11 @@
 				"Content-Type": "text/html; charset=UTF-8"
 			}
 		},
+		"go/createVideo/(.*)": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
 		"videomaker(.*)": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
