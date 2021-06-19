@@ -4,7 +4,7 @@
 <title>Comedy World Template | Slices of Daily Life | Vyond</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<meta name="description" content="With Joseph Animate Awsome Domain Quick App you can make your own video with just a few clicks and some typing on your keyboard. It's dead simple and fun!">
+<meta name="description" content="With Vyond Quick App you can make your own video with just a few clicks and some typing on your keyboard. It's dead simple and fun!">
 
 <meta name="google-site-verification" content="K_niiTfCVi72gwvxK00O4NjsVybMutMUnc-ZnN6HUuA">
 
@@ -95,7 +95,7 @@ function stepTo(step) {
 
 <div id="login_bar" style="display:none">
 	<div class="inside">
-		Joseph Animate Awsome Domain Quick Video Maker Revival is currently in beta right now.		<div class="options">
+		This quick video maker is in proces by joseph animate awsome doamin		<div class="options">
 			<a href="/" onclick="return confirm('You will lose your work if you leave this page. Are you sure?');">Home</a> -
 			<a href="/charactercreator/?themeId=family" onclick="return confirm('You will lose your work if you leave this page. Are you sure?');">Create a Character</a> -
 			<a href="/videomaker" onclick="return confirm('You will lose your work if you leave this page. Are you sure?');">Make a Video</a>
