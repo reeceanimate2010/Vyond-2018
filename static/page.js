@@ -184,7 +184,7 @@ module.exports = function (req, res, url) {
 				data: process.env.SWF_URL + "/player.swf",
 				type: "application/x-shockwave-flash",
                                 
-				id: "Player",
+				id: "EmbedPlayer",
                                 swf: process.env.SWF_URL + "/player.swf",
                                 width: "100%",
                                 height: "100%",
