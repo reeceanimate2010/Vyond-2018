@@ -125,6 +125,7 @@ module.exports = function (req, res, url) {
 				flashvars: {
 					movieId: "",
 			                loadas: 0,
+					presaveId: presave,
 			                asId: "",
 		  	                originalId: "",
 			                apiserver: "/",
