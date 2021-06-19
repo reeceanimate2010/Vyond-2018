@@ -38,18 +38,9 @@ module.exports = function (req, res, url) {
 			attrs = {
 				data: process.env.SWF_URL + "/cc.swf", // data: 'cc.swf',
 				type: "application/x-shockwave-flash",
-				
 				id: "char_creator",
-                                swf: process.env.SWF_URL + "/cc.swf",
-                                height: 600,
-                                width: 960,
-
-                                align: "middle",
-                                allowScriptAccess: "always",
-                                allowFullScreen: "true",
-                                wmode: "transparent",
-
-                                hasVersion: "10.3",
+				width: "100%",
+				height: "100%",
 				
 			};
 			params = {
@@ -70,6 +61,7 @@ module.exports = function (req, res, url) {
 					themeId: "family",
 					ut: 30},
 				
+				allowScriptAccess: "always",
 				movie: process.env.SWF_URL + "/cc.swf", // 'http://localhost/cc.swf'
 			};
 			break;
