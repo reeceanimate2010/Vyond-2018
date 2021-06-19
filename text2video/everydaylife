@@ -95,7 +95,7 @@ function stepTo(step) {
 
 <div id="login_bar" style="display:none">
 	<div class="inside">
-		This quick video maker is in proces by joseph animate awsome doamin		<div class="options">
+		This quick video maker is in process by joseph animate awsome doamin		<div class="options">
 			<a href="/" onclick="return confirm('You will lose your work if you leave this page. Are you sure?');">Home</a> -
 			<a href="/charactercreator/?themeId=family" onclick="return confirm('You will lose your work if you leave this page. Are you sure?');">Create a Character</a> -
 			<a href="/videomaker" onclick="return confirm('You will lose your work if you leave this page. Are you sure?');">Make a Video</a>
