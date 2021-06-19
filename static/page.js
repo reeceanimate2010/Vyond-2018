@@ -360,7 +360,7 @@ module.exports = function (req, res, url) {
 	res.setHeader("Content-Type", "text/html; charset=UTF-8");
 	Object.assign(params.flashvars, query);
 	res.end(
-		`<head>
+		`<html><head>
 	     <script>document.title='${title}'</script>
 <link href="https://josephcrosmanplays532.github.io/fonts/1/sailec.css" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/common_combined.css.gz.css" rel="stylesheet" type="text/css">
@@ -512,7 +512,8 @@ zE(function() {
         Vyond is a trademark of 2018 GoAnimate Inc. <a href="https://www.vyond.com/terms">Terms of Service</a> | <a href="https://www.vyond.com/privacy">Privacy Policy</a> | <a href="https://www.vyond.com/cookies">Cookie Policy</a>
     </div>
 </footer>
-</body>`
+</body>
+</html>`
 	);
 	return true;
 };
