@@ -73,16 +73,8 @@ module.exports = function (req, res, url) {
 				data: process.env.SWF_URL + "/cc_browser.swf", // data: 'cc_browser.swf',
 				type: "application/x-shockwave-flash",
 				id: "ccbrowser",
-                                swf: process.env.SWF_URL + "/cc_browser.swf",
-                                height: 1200,
-                                width: 960,
-
-                                align: "middle",
-                                allowScriptAccess: "always",
-                                allowFullScreen: "true",
-                                wmode: "transparent",
-
-                                hasVersion: "10.3",
+				width: "100%",
+				height: "100%",
 			};
 			params = {
 				flashvars: {
@@ -101,6 +93,7 @@ module.exports = function (req, res, url) {
 					themeId: "family",
 					u_info_school: "OjI6c2xoVVM3MWJIX05DMnA4cmRBQ2dFd3JvNE5xc2JEc2o4UFB2X1dVd2Eya2RPQisxVTl4d3ZHZHJPYnI4QURFNENWMjNkYm12WFdlUGxLT0g0OG4rekF5ajZhWGRGVTlocmJ4S1JhSWhCVXJlTF9BbXdyQUp3PQ=="},
 				
+				allowScriptAccess: "always",
 				movie: process.env.SWF_URL + "/cc_browser.swf", // 'http://localhost/cc_browser.swf'
 			};
 			break;
