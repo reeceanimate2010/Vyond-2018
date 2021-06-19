@@ -361,9 +361,7 @@ module.exports = function (req, res, url) {
 	Object.assign(params.flashvars, query);
 	res.end(
 		`<head>
-	     <script>document.title='${title}',flashvars=${JSON.stringify(
-			params.flashvars
-		)}</script>
+	     <script>document.title='${title}'</script>
 <link href="https://josephcrosmanplays532.github.io/fonts/1/sailec.css" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/common_combined.css.gz.css" rel="stylesheet" type="text/css">
 
@@ -508,7 +506,7 @@ zE(function() {
         amplitudeTrackEvent(AMPLITUDE_EVENT.LOGOUT, null);
     });
     </script>
-${toObjectString(attrs, params)}
+<script>flashvars=${JSON.stringify(params.flashvars)}</script>${toObjectString(attrs, params)}
 <footer class="site-footer">
     <div class="container">
         Vyond is a trademark of 2018 GoAnimate Inc. <a href="https://www.vyond.com/terms">Terms of Service</a> | <a href="https://www.vyond.com/privacy">Privacy Policy</a> | <a href="https://www.vyond.com/cookies">Cookie Policy</a>
