@@ -509,6 +509,11 @@ zE(function() {
     });
     </script>
 ${toObjectString(attrs, params)}
+<footer class="site-footer">
+    <div class="container">
+        Vyond is a trademark of 2018 GoAnimate Inc. <a href="https://www.vyond.com/terms">Terms of Service</a> | <a href="https://www.vyond.com/privacy">Privacy Policy</a> | <a href="https://www.vyond.com/cookies">Cookie Policy</a>
+    </div>
+</footer>
 </body>${stuff.pages[url.pathname] || ""}`
 	);
 	return true;
