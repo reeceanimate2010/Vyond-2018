@@ -47,6 +47,9 @@ module.exports = function (req, res, url) {
                                 align: "middle",
                                 allowScriptAccess: "always",
                                 allowFullScreen: "true",
+                                wmode: "transparent",
+
+                                hasVersion: "10.3",
 				
 			};
 			params = {
@@ -67,7 +70,6 @@ module.exports = function (req, res, url) {
 					themeId: "family",
 					ut: 30},
 				
-				allowScriptAccess: "always",
 				movie: process.env.SWF_URL + "/cc.swf", // 'http://localhost/cc.swf'
 			};
 			break;
