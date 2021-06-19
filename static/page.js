@@ -172,7 +172,8 @@ module.exports = function (req, res, url) {
 			                tray: "custom",
 			                isWide: 1,
 			                newusr: 1,
-			                goteam_draft_only: 0};
+			                goteam_draft_only: 0},
+			};
 			break;
 		}
 
