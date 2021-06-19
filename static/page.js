@@ -108,8 +108,18 @@ module.exports = function (req, res, url) {
 			attrs = {
 				data: process.env.SWF_URL + "/go_full.swf",
 				type: "application/x-shockwave-flash",
+				
+				id: "Studio",
+                                swf: "https://d3v4eglovri8yt.cloudfront.net/animation/66453a3ba2cc5e1b/go_full.swf",
 				width: "100%",
 				height: "100%",
+				
+				align: "middle",
+                                allowScriptAccess: "always",
+                                allowFullScreen: "true",
+                                wmode: "window",
+				
+				hasVersion: "10.3",
 			};
 			params = {
 				flashvars: {
