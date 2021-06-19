@@ -33,7 +33,7 @@ module.exports = function (req, res, url) {
 
 	var attrs, params, title;
 	switch (url.pathname) {
-		case "/cc": {
+		case "/charactercreator/new_char/": {
 			title = "Character Creator";
 			attrs = {
 				data: process.env.SWF_URL + "/cc.swf", // data: 'cc.swf',
@@ -67,7 +67,7 @@ module.exports = function (req, res, url) {
 			break;
 		}
 
-		case "/cc_browser": {
+		case "/charactercreator/": {
 			title = "CC Browser";
 			attrs = {
 				data: process.env.SWF_URL + "/cc_browser.swf", // data: 'cc_browser.swf',
@@ -99,7 +99,7 @@ module.exports = function (req, res, url) {
 			break;
 		}
 
-		case "/go_full": {
+		case "/videomaker/full/": {
 			let presave =
 				query.movieId && query.movieId.startsWith("m")
 					? query.movieId
@@ -180,7 +180,7 @@ module.exports = function (req, res, url) {
 			break;
 		}
 
-		case "/player": {
+		case "/videos/": {
 			title = "Player";
 			attrs = {
 				data: process.env.SWF_URL + "/player.swf",
