@@ -38,12 +38,7 @@
 				"Content-Type": "text/html; charset=UTF-8"
 			}
 		},
-		"videomaker/quickvideo/(.*)": {
-			"headers": {
-				"Content-Type": "text/html; charset=UTF-8"
-			}
-		},
-		"videomaker/full/(.*)": {
+		"text2video/(.*)": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
 			}
