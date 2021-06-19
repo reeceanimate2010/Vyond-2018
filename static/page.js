@@ -110,7 +110,6 @@ module.exports = function (req, res, url) {
 				type: "application/x-shockwave-flash",
 				
 				id: "Studio",
-                                swf: process.env.SWF_URL + "/go_full.swf",
 				width: "100%",
 				height: "100%",
 				
@@ -187,7 +186,6 @@ module.exports = function (req, res, url) {
 				type: "application/x-shockwave-flash",
                                 
 				id: "EmbedPlayer",
-                                swf: process.env.SWF_URL + "/player.swf",
                                 width: "100%",
                                 height: "100%",
 
@@ -257,7 +255,6 @@ module.exports = function (req, res, url) {
 				type: "application/x-shockwave-flash",
                                 
 				id: "EmbedPlayer",
-                                swf: process.env.SWF_URL + "/player.swf",
                                 width: "100%",
                                 height: "100%",
 
@@ -327,7 +324,6 @@ module.exports = function (req, res, url) {
 				type: "application/x-shockwave-flash",
                                 
 				id: "EmbedPlayer",
-                                swf: process.env.SWF_URL + "/player.swf",
                                 width: "100%",
                                 height: "100%",
 
