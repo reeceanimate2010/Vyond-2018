@@ -72,29 +72,35 @@ module.exports = function (req, res, url) {
 			attrs = {
 				data: process.env.SWF_URL + "/cc_browser.swf", // data: 'cc_browser.swf',
 				type: "application/x-shockwave-flash",
-				id: "char_creator",
-				width: "100%",
-				height: "100%",
+				id: "ccbrowser",
+                                swf: process.env.SWF_URL + "/cc_browser.swf",
+                                height: 1200,
+                                width: 960,
+
+                                align: "middle",
+                                allowScriptAccess: "always",
+                                allowFullScreen: "true",
+                                wmode: "transparent",
+
+                                hasVersion: "10.3",
 			};
 			params = {
 				flashvars: {
 					apiserver: "/",
-					storePath: process.env.STORE_URL + "/<store>",
-					clientThemePath: process.env.CLIENT_URL + "/<client_theme>",
-					original_asset_id: query["id"] || null,
-					themeId: "family",
-					ut: 60,
-					appCode: "go",
-					page: "",
-					siteId: "go",
-					m_mode: "school",
-					isLogin: "Y",
-					isEmbed: 1,
+					isEmbed: "0",
 					ctc: "go",
 					tlang: "en_US",
-					lid: 13,
-				},
-				allowScriptAccess: "always",
+					storePath: process.env.STORE_URL + "/<store>",
+					clientThemePath: process.env.CLIENT_URL + "/<client_theme>",
+					appCode: "go",
+					siteId: "school",
+					st: "",
+					userId: "0DyHqK6Yj9dM",
+					ut: 23,
+					uisa: 0,
+					themeId: "family",
+					u_info_school: "OjI6c2xoVVM3MWJIX05DMnA4cmRBQ2dFd3JvNE5xc2JEc2o4UFB2X1dVd2Eya2RPQisxVTl4d3ZHZHJPYnI4QURFNENWMjNkYm12WFdlUGxLT0g0OG4rekF5ajZhWGRGVTlocmJ4S1JhSWhCVXJlTF9BbXdyQUp3PQ=="},
+				
 				movie: process.env.SWF_URL + "/cc_browser.swf", // 'http://localhost/cc_browser.swf'
 			};
 			break;
