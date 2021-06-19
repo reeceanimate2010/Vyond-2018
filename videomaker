@@ -346,7 +346,7 @@ _wq.push({ id: 'ay95ar1ct3', onReady: function(video) {
 
                 <div class="theme__content__cta hidden-mobile">
                     <a class="btn btn-lg btn-orange text-uppercase" href="/videomaker/full/?tray=custom">Select</a>
-		    <a href="/videomaker/quickvideo/everydaylife" class="text-uppercase">Quick Video Maker</a>
+		    <a href="/text2video/everydaylife" class="text-uppercase">Quick Video Maker</a>
 
                 </div>
             </div>
