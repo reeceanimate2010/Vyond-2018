@@ -196,7 +196,8 @@ module.exports = function (req, res, url) {
                                 allowFullScreen: "true",
                                 wmode: "transparent",
 
-                                hasVersion: "10.3",			
+                                hasVersion: "10.3",
+				quality: "medium"
 			};
 			params = {
 				flashvars: {
