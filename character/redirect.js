@@ -24,7 +24,7 @@ module.exports = function (req, res, url) {
 		}
 		default: {
 			var type = url.query.type || defaultTypes[theme] || "";
-			redirect = `/charactercreator/?themeId=${theme}&bs=${type}`;
+			redirect = `/charactercreator/new_char/?themeId=${theme}&bs=${type}`;
 			break;
 		}
 	}
