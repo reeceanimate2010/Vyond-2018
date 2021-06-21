@@ -10,6 +10,8 @@ const mvu = require("./movie/upload");
 const asu = require("./asset/upload");
 const stl = require("./static/load");
 const stp = require("./static/page");
+// ragethegoanimator2008 will try his best to add the lvp to this lvm clone by hoping that he can use this spot.
+// const stb = require("./static/pagelvp");
 const asl = require("./asset/load");
 const asL = require("./asset/list");
 const ast = require("./asset/thmb");
@@ -24,7 +26,7 @@ const tsv = require("./tts/voices");
 const tsl = require("./tts/load");
 const url = require("url");
 
-const functions = [mvL, pmc, asl, chl, thl, thL, chs, cht, asL, tsl, chr, ast, mvm, mvl, mvs, mvt, tsv, asu, mvu, stp, stl];
+const functions = [mvL, pmc, asl, chl, thl, thL, chs, cht, asL, tsl, chr, ast, mvm, mvl, mvs, mvt, tsv, asu, mvu, stp, stl,]; //stb
 
 module.exports = http
 	.createServer((req, res) => {
