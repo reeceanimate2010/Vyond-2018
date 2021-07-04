@@ -1,12 +1,10 @@
-const loadPost = require('../request/post_body');
 const mp3Duration = require('mp3-duration');
 const voices = require('./info').voices;
 const asset = require('../asset/main');
-const get = require('../request/get');
 const qs = require('querystring');
 const brotli = require('brotli');
 const md5 = require("js-md5");
-const base64 = require("js-base64");
+const base64 = require("base64-js");
 const https = require('https');
 const http = require('http');
 
