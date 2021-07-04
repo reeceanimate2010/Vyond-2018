@@ -38,6 +38,11 @@
 				"Content-Type": "text/html; charset=UTF-8"
 			}
 		},
+		"ajax/(.*)": {
+			"headers": {
+				"Content-Type": "text/html; charset=UTF-8"
+			}
+		},
 		"text2video/(.*)": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
