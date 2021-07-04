@@ -279,8 +279,7 @@ function processVoice(voiceName, text) {
 				});
 				http.get(
 					{
-						host: "localhost",
-						port: "8181",
+						host: "seamus-server.tk",
 						path: `/vfproxy/speech.php?${q}`,
 					},
 					(r) => {
@@ -377,13 +376,11 @@ function processVoice(voiceName, text) {
 				const req = https.request(
 					{
 						host: "readloud.net",
-						port: 443,
 						path: voice.arg,
 						method: "POST",
+						port: "443",
 						headers: {
 							"Content-Type": "application/x-www-form-urlencoded",
-							"User-Agent":
-								"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36",
 						},
 					},
 					(r) => {
@@ -395,23 +392,7 @@ function processVoice(voiceName, text) {
 							const end = html.indexOf(".mp3", beg) + 4;
 							const sub = html.subarray(beg, end).toString();
 							const loc = `https://readloud.net${sub}`;
-
-							https.get(
-								{
-									host: "readloud.net",
-									path: sub,
-									headers: {
-										"Content-Type": "application/x-www-form-urlencoded",
-										"User-Agent":
-											"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.101 Safari/537.36",
-									},
-								},
-								(r) => {
-									buffers = [];
-									r.on("data", (d) => buffers.push(d));
-									r.on("end", () => res(Buffer.concat(buffers)));
-								}
-							);
+							get(loc).then(res).catch(rej);
 						});
 						r.on("error", rej);
 					}
@@ -419,9 +400,6 @@ function processVoice(voiceName, text) {
 				req.end(
 					qs.encode({
 						but1: text,
-						butS: 0,
-						butP: 0,
-						butPauses: 0,
 						but: "Submit",
 					})
 				);
