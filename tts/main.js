@@ -1,5 +1,4 @@
 const voices = require('./info').voices;
-const get = require('../request/get');
 const qs = require('querystring');
 const https = require('https');
 
