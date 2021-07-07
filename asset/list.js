@@ -14,7 +14,7 @@ async function listAssets(data, makeZip) {
 			xmlString = `${header}<ugc more="0">${chars
 				.map(
 					(v) =>
-						`<char id="${v.id}" name="Untitled" cc_theme_id="${v.theme}" thumbnail_url="/char_thumbs/${v.id}.png" copyable="Y"><tags/></char>`
+						`<char id="${v.id}" name="${v.name}" cc_theme_id="${v.theme}" thumbnail_url="/char_thumbs/${v.id}.png" copyable="Y"><tags/></char>`
 				)
 				.join("")}</ugc>`;
 			break;
@@ -22,7 +22,7 @@ async function listAssets(data, makeZip) {
 		case "bg": {
 			var files = asset.list(data.movieId, "bg");
 			xmlString = `${header}<ugc more="0">${files
-				.map((v) => `<background subtype="0" id="${v.id}" name="${v.name}" enable="Y"/>`)
+				.map((v) => `<background subtype="${v.subtype}" id="${v.id}" name="${v.name}" enable="Y"/>`)
 				.join("")}</ugc>`;
 			break;
 		}
@@ -48,7 +48,7 @@ async function listAssets(data, makeZip) {
 		default: {
 			var files = asset.list(data.movieId, "prop");
 			xmlString = `${header}<ugc more="0">${files
-				.map((v) =>`<prop subtype="0" id="${v.id}" name="${v.name}" enable="Y" holdable="0" headable="0" placeable="1" facing="left" width="0" height="0" duration="0"/>`)
+				.map((v) =>`<prop subtype="${v.subtype}" id="${v.id}" name="${v.name}" enable="Y" holdable="${v.holdable}" headable="${v.headable}" placeable="1" facing="${v.facing}" width="${v.width}" height="${v.height}" duration="0"/>`)
 				.join("")}</ugc>`;
 			break;
 		}
