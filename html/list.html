@@ -64,6 +64,7 @@
 	<table>
 		<thead>
 			<tr>
+				<h3>Your Videos</h3>
 				<td></td>
 				<td>Video Title</td>
 				<td>Last Modified</td>
@@ -105,7 +106,7 @@
 	var tbody = document.getElementsByTagName('tbody')[0];
 	var loadMore = document.getElementById('load_more');
 	const listReq = new XMLHttpRequest();
-	listReq.open('GET', '/movieList');
+	listReq.open('GET', '/ajax/getMovie');
 	listReq.send();
 
 	var C = 0;
