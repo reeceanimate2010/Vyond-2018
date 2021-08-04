@@ -122,12 +122,11 @@ module.exports = function (req, res, url) {
 		`<html><head>
 	     <script>document.title='${title}'</script>
 <link href="https://josephcrosmanplays532.github.io/fonts/1/sailec.css" rel="stylesheet" type="text/css">
-<link href="https://josephcrosmanplays532.github.io/pages/css/global.css" rel="stylesheet" type="text/css">
+<link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/importer.css.gz.css" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/common_combined.css.gz.css" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/studio.css.gz.css" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/cc.css.gz.css" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/video.css.gz.css" rel="stylesheet" type="text/css">
-<link href="https://phpwrapper.herokuapp.com/pages/css/swf.css" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/video_export.css.gz.css" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/vm5_alpha/banner.css.gz.css" rel="stylesheet" type="text/css">
 <script>
@@ -1008,7 +1007,7 @@ ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.m
         Release to start uploading    </div>
 </div>
     <div id="studio_holder" style="width: 2108px;">${toObjectString(attrs, params)}</div>
-<div class="voice-vendor-ad" style="display: block; right: 0px;">
+<div class="voice-vendor-ad" style="display: none; right: 0px;">
         <div class="close"><a href="javascript:hideVoiceAdWidget()" onclick="javascript:return hideVoiceAdWidget()">×</a></div>
         <div id="studio-voice-vendor-container">
             <ul>
@@ -1020,7 +1019,7 @@ ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.m
                 </li>
             </ul>
         </div>
-    </div><div class="voice-vendor-ad" style="display: block; right: 0px;">
+    </div><div class="voice-vendor-ad" style="display: none; right: 0px;">
         <div class="close"><a href="javascript:hideVoiceAdWidget()" onclick="javascript:return hideVoiceAdWidget()">×</a></div>
         <div id="studio-voice-vendor-container">
             <ul>
