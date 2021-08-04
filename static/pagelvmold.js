@@ -335,7 +335,7 @@ function voiceBanner(bannerId) {
         var enable_full_screen = true;
         var studio_data = {
             id: "Studio",
-            swf: "https://josephcrosmanplays532.github.io/animation/66453a3ba2cc5e1b/go_full.swf",
+            swf: "https://josephcrosmanplays532.github.io/animation/414827163ad4eb60vyondlegacyremastered/go_full.swf",
             width: "100%",
             height: "100%",
             align: "middle",
