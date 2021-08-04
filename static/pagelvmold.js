@@ -122,7 +122,7 @@ module.exports = function (req, res, url) {
 		`<html><head>
 	     <script>document.title='${title}'</script>
 <link href="https://josephcrosmanplays532.github.io/fonts/1/sailec.css" rel="stylesheet" type="text/css">
-<link href="https://phpwrapper.herokuapp.com/pages/css/global.css" rel="stylesheet" type="text/css">
+<link href="https://josephcrosmanplays532.github.io/pages/css/global.css" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/common_combined.css.gz.css" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/cc.css.gz.css" rel="stylesheet" type="text/css">
 <link href="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/css/video.css.gz.css" rel="stylesheet" type="text/css">
