@@ -252,6 +252,7 @@ zE(function() {
         amplitudeTrackEvent(AMPLITUDE_EVENT.LOGOUT, null);
     });
     </script>
+
 <div style="position:relative;">
     <div id="studioBlock" style="height: 0px;"><!-- --></div>
 
@@ -307,7 +308,7 @@ function voiceBanner(bannerId) {
 }
 </script>
 
-    <div id="previewPlayerContainer" style="display: none;">
+        <div id="previewPlayerContainer" style="display: none;">
         <div class="preview-player" id="previewPlayer">
             <h2>Preview Video</h2>
             <div id="playerdiv"></div>
@@ -399,21 +400,17 @@ function voiceBanner(bannerId) {
             swf: "https://josephcrosmanplays532.github.io/animation/414827163ad4eb60vyondlegacyremastered/go_full.swf",
             width: "100%",
             height: "100%",
-
             align: "middle",
             allowScriptAccess: "always",
             allowFullScreen: "true",
             wmode: "window",
-
             hasVersion: "10.3"
         };
-
         if (!enable_full_screen) {
             studio_data.width  = 960;
             studio_data.height  = 630;
             resize_studio = false;
         }
-
         studio_data.flashvars = ${JSON.stringify(params.flashvars)};
 
         var _ccad = null;
@@ -932,11 +929,6 @@ ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.m
 <!-- FOOTER -->
 
 
-<footer class="site-footer">
-    <div class="container">
-        Vyond is a trademark of 2018 GoAnimate Inc. <a href="https://www.vyond.com/terms">Terms of Service</a> | <a href="https://www.vyond.com/privacy">Privacy Policy</a> | <a href="https://www.vyond.com/cookies">Cookie Policy</a>
-    </div>
-</footer>
 <div id="studio_container" style="top: 0px; width: 2238px; height: 1586px;"><div class="ga-importer">
     <div class="ga-importer-header">
         <form class="ga-importer-base-form" action="/ajax/saveUserProp" method="post">
@@ -1063,8 +1055,7 @@ src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAARAQAABAAQRFNJRw
 </style>
 <script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","//connect.facebook.net/en_US/fbevents.js");fbq("init","784667875001149");fbq("track","PageView");</script>
 <noscript>&lt;img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=784667875001149&amp;amp;ev=PageView&amp;amp;noscript=1"&gt;</noscript>
-</body>
-</html>`
+</body></html>`
 	);
 	return true;
 };
