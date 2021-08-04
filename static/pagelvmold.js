@@ -1007,9 +1007,9 @@ ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.m
         Release to start uploading    </div>
 </div>
     <div id="studio_holder" style="width: 2108px;">${toObjectString(attrs, params)}</div>
-<div class="voice-vendor-ad" style="display: none; right: 0px;">
+<div class="voice-vendor-ad" style="display: block; right: 0px;">
         <div class="close"><a href="javascript:hideVoiceAdWidget()" onclick="javascript:return hideVoiceAdWidget()">×</a></div>
-        <div id="studio-voice-vendor-container">
+        <div id="studio-voice-vendor-container" style="display:none">
             <ul>
                 <li><a class="gtm-ga-pageview-t2" id="voice-vendor-vb" target="_blank" href="https://voicebunny.com/?p=vyond" data-gtmv-page="/pageTracker/voicebanner/VoiceBunny" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/img/video_voice/btn_vb.png"></a></li>
                 <li><a class="gtm-ga-pageview-t2" id="voice-vendor-iw" target="_blank" href="https://www.inwhatlanguage.com/goanimate-translations/" data-gtmv-page="/pageTracker/voicebanner/InWhatLanguage" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/img/video_voice/btn_iw.png"></a></li>
@@ -1019,9 +1019,9 @@ ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.m
                 </li>
             </ul>
         </div>
-    </div><div class="voice-vendor-ad" style="display: none; right: 0px;">
+    </div><div class="voice-vendor-ad" style="display: block; right: 0px;">
         <div class="close"><a href="javascript:hideVoiceAdWidget()" onclick="javascript:return hideVoiceAdWidget()">×</a></div>
-        <div id="studio-voice-vendor-container">
+        <div id="studio-voice-vendor-container" style="display:none">
             <ul>
                 <li><a class="gtm-ga-pageview-t2" id="voice-vendor-vb" target="_blank" href="https://voicebunny.com/?p=vyond" data-gtmv-page="/pageTracker/voicebanner/VoiceBunny" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/img/video_voice/btn_vb.png"></a></li>
                 <li><a class="gtm-ga-pageview-t2" id="voice-vendor-iw" target="_blank" href="https://www.inwhatlanguage.com/goanimate-translations/" data-gtmv-page="/pageTracker/voicebanner/InWhatLanguage" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/img/video_voice/btn_iw.png"></a></li>
