@@ -369,7 +369,7 @@ ${toObjectString(attrs, params)}
 		<a class="button_big text-uppercase" href="#" onclick="saveVideo()">Save now</a>
 	</div>
 </div>
-<footer class="site-footer">
+<footer style="display:none" class="site-footer">
     <div class="container">
         Vyond is a trademark of 2018 GoAnimate Inc. <a href="https://www.vyond.com/terms">Terms of Service</a> | <a href="https://www.vyond.com/privacy">Privacy Policy</a> | <a href="https://www.vyond.com/cookies">Cookie Policy</a>
     </div>
