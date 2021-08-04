@@ -13,7 +13,7 @@ const fs = require("fs");
 module.exports = function (req, res, url) {
 	if (req.method != "POST") return;
 	switch (url.pathname) {
-		case "/upload_asset":
+		case "/ajax/saveUserProp":
 			formidable().parse(req, (_, fields, files) => {
 				var [mId, mode, ext] = fields.params.split(".");
 				switch (mode) {
