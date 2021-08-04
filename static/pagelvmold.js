@@ -251,7 +251,121 @@ zE(function() {
         amplitudeTrackEvent(AMPLITUDE_EVENT.LOGOUT, null);
     });
     </script>
-<script>flashvars=${JSON.stringify(params.flashvars)}</script>${toObjectString(attrs, params)}${stuff.pages[url.pathname] || ""}
+${toObjectString(attrs, params)}<iframe style="display:none" name="dummy"></iframe>
+
+<script>
+	////
+	//// This JS contains important Video Studio stuff
+	////
+	
+	///
+	/// Variables
+	///
+	var previewPlayerTempData = "";
+	const fu = document.getElementById('fileupload'),
+		sub = document.getElementById('submit');
+
+	///
+	/// Previewer
+	///
+	function initPreviewPlayer(dataXmlStr, startFrame, containsChapter, themeList) {
+		// New variable to be used by loadPreviewer()
+		movieDataXmlStr = dataXmlStr;
+		// Movie XML
+		filmXmlStr = dataXmlStr.split("<filmxml>")[1].split("</filmxml>")[0];
+		// Show preview popup
+		document.getElementById("preview_popup_container").style.display = "block";
+		// Load the Video Previewer
+		loadPreviewer();
+	}
+	function loadPreviewer() {
+		// I think this is in case of an error??
+		if (movieDataXmlStr === null) {
+			return;
+		}
+		// I don't know
+		savePreviewData(movieDataXmlStr);
+	}
+	function savePreviewData(a) {
+		// Set temp data variable
+		previewPlayerTempData = a
+	}
+	function retrievePreviewPlayerData() {
+		// Store in separate variable
+		var recentPreviewPlayerTempData = previewPlayerTempData;
+		// Clear original variable
+		previewPlayerTempData = "";
+		// Return recent temp data
+		return recentPreviewPlayerTempData;
+	}
+
+	///
+	/// Importing
+	///
+	// Show upload window
+	function showImporter() {
+		document.getElementById("import_popup_container").style.display = "block";
+	};
+
+	///
+	/// Other stuff
+	///
+	// Redirect to Video Browser on Video Studio exit
+	function exitStudio() {
+		window.location = "/videos/browse.php";
+	}
+	// Hide interactive tutorial
+	interactiveTutorial = {
+		neverDisplay: function() {
+			return true
+		}
+	};
+	// Hide Video Previewer popup
+	function hidePreviewer() {
+		document.getElementById("preview_popup_container").style.display = "none";
+	}
+	// Save your video with the preview window
+        function saveVideo() {
+		document.getElementById("preview_popup_container").style.display = "none";
+		document.getElementById("Studio").onExternalPreviewPlayerPublish();
+	}
+	// Hide Asset Importer popup
+	function hideImporter() {
+		document.getElementById("import_popup_container").style.display = "none";
+	}
+</script>
+<div id="import_popup_container" style="display:none">
+	<div id="import_popup">
+		<h2 id="import-an-asset">Import an Asset</h2>
+		<p class="close-button" onclick="hideImporter()">X</p>
+		<!-- Import form -->
+		<div id="import_image">
+			<form id="uploadbanner" enctype="multipart/form-data" method="post" action="/goapi/uploadAsset" target="dummy">
+				<input id="fileupload" name="import" type="file" accept=".mp3,.wav,.png,.jpg">
+				<h3 id="import-as">Import As:</h3>
+				<input type="radio" value="prop" name="subtype"> Prop</input>
+				<br />
+				<input type="radio" value="background" name="subtype"> Background</input>
+				<br />
+				<input type="submit" value="Import" onclick='document.getElementById("Studio").importerUploadComplete("importerUploadComplete"); document.getElementById("import_popup_container").style.display = "none";' id="submit" class="button_import" />
+			</form>
+		</div>
+	</div>
+</div>
+<div id="preview_popup_container" style="display:none">
+	<div id="preview_popup">
+		<h2 id="preview-video">Preview Video</h2>
+		<p class="close-button" onclick="hidePreviewer()">X</p>
+		<object data="https://ga.vyond.com/static/animation/player.swf" type="application/x-shockwave-flash" id="preview_player">
+			<!-- The flashvars are a huge mess, have fun looking at them. :) -->
+			<param name="flashvars" value="apiserver=/&storePath=https://ga.vyond.com/static/store/<store>&isEmbed=1&ctc=go&ut=60&bs=default&appCode=go&page=&siteId=go&lid=13&isLogin=Y&retut=1&clientThemePath=https://ga.vyond.com/static/<client_theme>&themeId=custom&tlang=en_US&isInitFromExternal=1&goteam_draft_only=1&isWide=1&collab=0&startFrame=previewStartFrame&autostart=1&nextUrl=/yourvideos&tray=custom">
+			<param name="allowScriptAccess" value="always">
+			<param name="allowFullScreen" value="true">
+		</object>
+                <a class="button_big text-uppercase" href="#" onclick="hidePreviewer()">Back to editing</a>
+		<a class="button_big text-uppercase" href="#" onclick="saveVideo()">Save now</a>
+	</div>
+</div>
 <footer class="site-footer">
     <div class="container">
         Vyond is a trademark of 2018 GoAnimate Inc. <a href="https://www.vyond.com/terms">Terms of Service</a> | <a href="https://www.vyond.com/privacy">Privacy Policy</a> | <a href="https://www.vyond.com/cookies">Cookie Policy</a>
