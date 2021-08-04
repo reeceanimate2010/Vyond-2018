@@ -343,7 +343,7 @@ ${toObjectString(attrs, params)}
 		<p class="close-button" onclick="hideImporter()">X</p>
 		<!-- Import form -->
 		<div id="import_image">
-			<form id="uploadbanner" enctype="multipart/form-data" method="post" action="/goapi/uploadAsset" target="dummy">
+			<form id="uploadbanner" enctype="multipart/form-data" method="post" action="/ajax/saveUserProp" target="dummy">
 				<input id="fileupload" name="import" type="file" accept=".mp3,.wav,.png,.jpg">
 				<h3 id="import-as">Import As:</h3>
 				<input type="radio" value="prop" name="subtype"> Prop</input>
