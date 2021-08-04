@@ -252,7 +252,10 @@ zE(function() {
         amplitudeTrackEvent(AMPLITUDE_EVENT.LOGOUT, null);
     });
     </script>
-${toObjectString(attrs, params)}<iframe style="display:none" name="dummy"></iframe>
+<div id="studio-container">
+${toObjectString(attrs, params)}
+</div>
+<iframe style="display:none" name="dummy"></iframe>
 
 <script>
 	////
