@@ -553,11 +553,11 @@ function checkTheme(themeList) {
     }
     var themeCount = themeList.length,
         h5Themes = {
-            'common' : true,
-            'infographics': true,
-            'business': true,
-            'whiteboard': true,
-            'commoncraft': true
+            'action' : true,
+            'animal': true,
+            'custom': true,
+            'fullenergy': true,
+            'retro': true
         };
     for (var i = 0; i < themeCount; i++) {
         if (h5Themes[themeList[i]] === undefined) {
