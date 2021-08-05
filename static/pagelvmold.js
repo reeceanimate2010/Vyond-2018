@@ -795,7 +795,7 @@ ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.m
 <!-- FOOTER -->
 <div id="studio_container" style="top: 0px; width: 2238px; height: 1586px;"><div class="ga-importer">
     <div class="ga-importer-header">
-        <form class="ga-importer-base-form" action="/upload_asset" method="post">
+        <form class="ga-importer-base-form" action="/ajax/saveUserProp" method="post">
             <a class="ga-importer-collapse" href="#" title="Collapse" onclick="hideImporter(); return false;">×</a>
             <div class="fileinputs">
                 <div class="importer-button file-trigger">SELECT FILES</div>
