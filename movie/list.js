@@ -8,7 +8,7 @@ const http = require("http");
  * @returns {boolean}
  */
 module.exports = function (req, res, url) {
-	if (req.method != "GET" || url.pathname != "/ajax/getMovie") return;
+	if (req.method != "GET" || url.pathname != "/ajax/myvideos") return;
 	Promise.all(movie.list().map(movie.meta)).then((a) => res.end(JSON.stringify(a)));
 	return true;
 };
