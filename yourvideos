@@ -569,7 +569,7 @@ var json;
 		var tbody = document.getElementsByTagName('tbody')[0];
 		var loadMore = document.getElementById('load_more');
 		const listReq = new XMLHttpRequest();
-		listReq.open('GET', '/ajax/getMovie');
+		listReq.open('GET', '/ajax/myvideos');
 		listReq.send();
 
 		var C = 0;
