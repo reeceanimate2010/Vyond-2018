@@ -33,7 +33,7 @@ module.exports = function (req, res, url) {
 
 	var attrs, params, title;
 	switch (url.pathname) {
-		case "/videomaker/full/": {
+		case "/studio": {
 			let presave =
 				query.movieId && query.movieId.startsWith("m")
 					? query.movieId
@@ -62,9 +62,9 @@ module.exports = function (req, res, url) {
 			                asId: "",
 		  	                originalId: "",
 			                apiserver: "/",
-			                storePath: process.env.STORE_URL + "/<store>",
-			                clientThemePath: process.env.CLIENT_URL + "/<client_theme>",
-			                animationPath: process.env.SWF_URL + "/",
+			                storePath: "https://josephcrosmanplays532.github.io/store/50/<store>",
+			                clientThemePath: "https://josephcrosmanplays532.github.io/static/146/<client_theme>",
+			                animationPath: "https://josephcrosmanplays532.github.io/animation/18/",
 			                userId: "0cf4CMw1ZNCk",
 			                username: "bakeryb40488",
 			                uemail: "bakeryb40488@gmail.com",
@@ -72,7 +72,7 @@ module.exports = function (req, res, url) {
 			                ut: 23,
 			                ve: false,
 			                isEmbed: 0,
-			                nextUrl: "/go/savedMovie/?movieId=<movieId>",
+			                nextUrl: "/go/movie/?movieId=<movieId>",
 			                bgload: process.env.SWF_URL + "/go_full.swf",
 			                lid: "13",
 			                ctc: "go",
@@ -112,7 +112,46 @@ module.exports = function (req, res, url) {
 			};
 			break;
 		}
-			
+		
+	        case "/go_full": {
+			let presave =
+				query.movieId && query.movieId.startsWith("m")
+					? query.movieId
+					: `m-${fUtil[query.noAutosave ? "getNextFileId" : "fillNextFileId"]("movie-", ".xml")}`;
+			title = "Video Editor";
+			attrs = {
+				data: process.env.SWF_URL + "/go_full.swf",
+				type: "application/x-shockwave-flash",
+				width: "100%",
+				height: "100%",
+			};
+			params = {
+				flashvars: {
+					apiserver: "/",
+					storePath: "https://josephcrosmanplays532.github.io/store/50/<store>",
+					isEmbed: 1,
+					ctc: "go",
+					ut: 50,
+					bs: "default",
+					appCode: "go",
+					page: "",
+					siteId: "go",
+					lid: 13,
+					isLogin: "Y",
+					retut: 1,
+					clientThemePath: "https://josephcrosmanplays532.github.io/static/146/<client_theme>",
+					themeId: "business",
+					tlang: "en_US",
+					presaveId: presave,
+					goteam_draft_only: 1,
+					isWide: 1,
+					collab: 0,
+					nextUrl: "/yourvideos",
+				},
+				allowScriptAccess: "always",
+			};
+			break;
+		}
 		default:
 			return;
 	}
@@ -235,8 +274,9 @@ height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</
         <div class="close"><a href="javascript:hideVoiceAdWidget()" onclick="javascript:return hideVoiceAdWidget()">×</a></div>
         <div id="studio-voice-vendor-container">
             <ul>
-                <li><a class="gtm-ga-pageview-t2" id="voice-vendor-vb" target="_blank" href="https://voicebunny.com/?p=vyond" data-gtmv-page="/pageTracker/voicebanner/VoiceBunny" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/img/video_voice/btn_vb.png"></a></li>
-                <li><a class="gtm-ga-pageview-t2" id="voice-vendor-iw" target="_blank" href="https://www.inwhatlanguage.com/goanimate-translations/" data-gtmv-page="/pageTracker/voicebanner/InWhatLanguage" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/img/video_voice/btn_iw.png"></a></li>
+                <li><a class="gtm-ga-pageview-t2" id="voice-vendor-vb" target="_blank" href="https://voicebunny.com/?p=vyond" data-gtmv-page="/pageTracker/voicebanner/VoiceBunny" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/477/go/img/video_voice/btn_vb.png"></a></li>
+                <li><a class="gtm-ga-pageview-t2" id="voice-vendor-vc" target="_blank" href="https://voices.com" data-gtmv-page="/pageTracker/voicebanner/Voices.com" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/477/go/img/video_voice/btn_vc.png"></a></li>
+		<li><a class="gtm-ga-pageview-t2" id="voice-vendor-sp" target="_blank" href="https://sitepal.com" data-gtmv-page="/pageTracker/voicebanner/SitePal" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/477/go/img/video_voice/btn_sp.png"></a></li>
                 <li>
                     <hr class="sperator">
                     <a class="voiceover-tips gtm-ga-pageview-t2" target="_blank" href="http://goanimate.com/video-maker-tips/tutorial-why-you-should-break-up-your-dialogue-audio-into-small-pieces-before-importing/" data-gtmv-page="/pageTracker/voicebanner/VoiceoverTips" onclick="setvoicebannercookie();"><span><i class="lightbulb"></i>Voiceover Tips &gt;</span></a>
@@ -335,7 +375,7 @@ function voiceBanner(bannerId) {
         var enable_full_screen = true;
         var studio_data = {
             id: "Studio",
-            swf: "https://josephcrosmanplays532.github.io/animation/414827163ad4eb60vyondlegacyremastered/go_full.swf",
+            swf: "https://josephcrosmanplays532.github.io/animation/18/go_full.swf",
             width: "100%",
             height: "100%",
             align: "middle",
@@ -586,7 +626,7 @@ function loadLegacyPreview() {
     createPreviewPlayer("playerdiv", {
         height: 360,
         width: 640,
-        player_url: "https://ga.vyond.com/static/animation/player.swf",
+        player_url: "https://josephcrosmanplays532.github.io/animation/18/player.swf",
         quality: "medium"
     }, {
         movieOwner: "", movieOwnerId: "", movieId: "", ut: "-1",
@@ -595,7 +635,7 @@ function loadLegacyPreview() {
         autostart: "1", appCode: "go", is_slideshow: "0", originalId: "0", is_emessage: "0", isEmbed: "0", refuser: "",
         utm_source: "", uid: "", isTemplate: "1", showButtons: "0", chain_mids: "", showshare: "0", averageRating: "",
                     s3base: "https://s3.amazonaws.com/fs.goanimate.com/,https://assets.vyond.com/",
-                ratingCount: "", fb_app_url: "/", numContact: 0, isInitFromExternal: 1, storePath: "https://ga.vyond.com/static/store/<store>", clientThemePath: "https://ga.vyond.com/static/<client_theme>", animationPath: "https://ga.vyond.com/static/animation/",
+                ratingCount: "", fb_app_url: "/", numContact: 0, isInitFromExternal: 1, storePath: "https://josephcrosmanplays532.github.io/store/50/<store>", clientThemePath: "https://josephcrosmanplays532.github.io/static/146/<client_theme>", animationPath: "https://josephcrosmanplays532.github.io/animation/18/",
         startFrame: previewStartFrame
     });
     $('#previewPlayer').removeClass('using-h5');
@@ -673,74 +713,6 @@ VideoTutorial.tutorials.enterexit = {
     wistiaId: 'fvjsa3jnzc',
 }
 </script>
-<script id="importer-share-asset-tmpl" type="text/x-jquery-tmpl">
-<li class="share-asset clearfix">
-    <div class="share-asset-selection">
-        <input type="checkbox" checked>
-    </div>
-    <div class="share-asset-icon"></div>
-    <div class="share-asset-body">
-        <div class="filename"></div>
-        <div class="actions clearfix">
-            <span class="category small"></span>
-            <div class="share-type none">
-                <span class="none" title="Not shared" data-placement="left"><span class="glyph-pro glyph-lock"></span></span>
-                <span class="team" title="All members" data-placement="left"><span class="glyph-pro glyph-group"></span></span>
-                <span class="shared" title="Custom..." data-placement="left"><span class="glyph-pro glyph-parents"></span></span>
-            </div>
-        </div>
-    </div>
-</li>
-</script>
-<script id="importer-file-tmpl" type="text/x-jquery-tmpl">
-<li class="ga-importer-file clearfix fade">
-    <div class="ga-importer-file-icon"><div class="ga-importer-file-progress-bar"><div class="upload-progress"></div></div></div>
-    <div class="ga-importer-file-body">
-        <div class="filename"></div>
-        <div class="actions clearfix">
-            <span class="menu"></span>
-            <span class="category"></span>
-            <a class="cancel" href="#" data-action="cancel-upload" title="Cancel">&times;</a>
-            <a class="clear" href="#" data-action="clear-file" title="Clear">&times;</a>
-            <a class="add-to-scene" href="#" data-action="add-to-scene">Add to scene</a>
-            <a class="add-to-frame" href="#" data-action="add-to-frame">Add to frame</a>
-            <span class="processing">
-                <span class="processing-video">Processing. Please wait...</span>
-                <span class="processing-font">Processing time: ~3 mins</span>
-            </span>
-            <span class="error"></span>
-        </div>
-    </div>
-</li>
-</script>
-<script id="importer-select-sound-tmpl" type="text/x-jquery-tmpl">
-<div class="dropdown">
-<a class="import-as-btn dropdown-toggle" data-toggle="dropdown" href="#">Import as <span class="caret"></span></a>
-<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-    <li><a tabindex="-1" href="#" data-subtype="bgmusic">Music</a></li>
-    <li><a tabindex="-1" href="#" data-subtype="soundeffect">Sound Effect</a></li>
-    <li><a tabindex="-1" href="#" data-subtype="voiceover">Voice-Over</a></li>
-</ul>
-</div>
-</script>
-<script id="importer-select-prop-tmpl" type="text/x-jquery-tmpl">
-<div class="dropdown">
-<a class="import-as-btn dropdown-toggle" data-toggle="dropdown" href="#">Import as <span class="caret"></span></a>
-<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-    <li><a tabindex="-1" href="#" data-subtype="prop">Prop</a></li>
-    <li><a tabindex="-1" href="#" data-subtype="bg">Backdrop</a></li>
-</ul>
-</div>
-</script>
-<script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/importer_share.js.gz.js"></script>
-<script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/importer.js.gz.js"></script>
-<script>window.searchTermsDataUrl = 'https://josephcrosmanplays532.github.io/store/3a981f5cb2739137/common/terms.json';</script>
-<script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/search-suggestion.js.gz.js"></script>
-<script src="https://josephcrosmanplays532.github.io/static/55910a7cd204c37c/go/js/preview-player-control.js.gz.js"></script>
-<script>
-ImporterFile.defaults.options.accept_mime = ["image\/png","image\/jpeg","image\/gif","image\/bmp","audio\/mpeg","audio\/wav","audio\/x-wav","audio\/vnd.wave","audio\/wave","audio\/mp3","audio\/mp4","audio\/ogg","audio\/vorbis","audio\/aac","audio\/m4a","audio\/x-m4a","video\/mp4","video\/mpeg4","video\/x-flv","video\/x-ms-wmv","application\/mp4"];
-ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.ms-opentype"];
-</script>
 <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async=""></script>
 <script>
     (function() {
@@ -793,78 +765,15 @@ ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.m
     }
 </script>
 <!-- FOOTER -->
-<div id="studio_container" style="top: 0px; width: 2238px; height: 1586px;"><div class="ga-importer">
-    <div class="ga-importer-header">
-        <form class="ga-importer-base-form" action="/ajax/saveUserProp" method="post">
-            <a class="ga-importer-collapse" href="#" title="Collapse" onclick="hideImporter(); return false;">×</a>
-            <div class="fileinputs">
-                <div class="importer-button file-trigger">SELECT FILES</div>
-                <input class="ga-importer-file-input" type="file" name="file" multiple="">
-            </div>
-            <span class="hints">
-                <i class="glyph-pro glyph-circle-question_mark"></i>
-                <div class="tooltip in" style="display:none;">
-                    <div class="tooltip-arrow"></div>
-                    <div class="tooltip-inner">
-                        <ul>
-                            <li>Maximum file size: 15MB</li>
-                            <li>Images: JPG, PNG<br>To cover the whole stage in a 1080p video, use an image at least 1920px x 1080px.</li>
-                            <li>Audio: MP3, WAV, M4A</li>
-                            <li>Video: MP4.</li>
-                            <li>Fonts: TTF, OTF (Professional only)</li>
-                        </ul>
-                    </div>
-                </div>
-            </span>
-            <input type="hidden" name="subtype" value="">
-        </form>
-    </div>
-    <div class="ga-importer-content" style="height: 1536px;">
-        <div class="ga-importer-start">
-            <div class="ga-importer-start-draghere">Drag files here</div>
-            <div class="ga-importer-instruction general">
-                <ul>
-                    <li><strong>Maximum file size:</strong> 15MB</li>
-                    <li><strong>Images:</strong> JPG, PNG<br>To cover the whole stage in a 1080p video, use an image at least 1920px x 1080px.</li>
-                    <li><strong>Audio:</strong> MP3, WAV, M4A</li>
-                    <li><strong>Video:</strong> MP4.</li>
-                    <li><strong>Fonts:</strong> TTF, OTF (Professional only)</li>
-                </ul>
-            </div>
-        </div>
-        <div class="ga-importer-results">
-            <div class="ga-importer-notice clearfix">
-                <div class="ga-importer-notice-count">
-                    Files added. <a class="open-your-library">View Library</a>
-                </div>
-            </div>
-            <ul class="ga-importer-files"></ul>
-        </div>
-        <div class="ga-importer-queue-message">
-            Assign a category to start importing
-            <span class="hints pull-right">
-                <i class="i-help"></i>
-                <div class="tooltip in" style="display:none;">
-                    <div class="tooltip-arrow"></div>
-                    <div class="tooltip-inner">
-                        <p>Imported files are categorized to simplify browsing.</p>
-                        <p>Use the "IMPORT AS" drop down to see the available categories based on the format of the file you import.</p>
-                    </div>
-                </div>
-            </span>
-        </div>
-        <ul class="ga-importer-queue"></ul>
-    </div>
-    <div class="ga-import-dnd-hint">
-        Release to start uploading    </div>
-</div>
+<div id="studio_container" style="top: 0px; width: 2238px; height: 1586px;">
     <div id="studio_holder" style="width: 2108px;">${toObjectString(attrs, params)}</div>
 <div class="voice-vendor-ad" style="display: block; right: 0px;">
         <div class="close"><a href="javascript:hideVoiceAdWidget()" onclick="javascript:return hideVoiceAdWidget()">×</a></div>
         <div id="studio-voice-vendor-container">
             <ul>
-                <li><a class="gtm-ga-pageview-t2" id="voice-vendor-vb" target="_blank" href="https://voicebunny.com/?p=vyond" data-gtmv-page="/pageTracker/voicebanner/VoiceBunny" onclick="setvoicebannercookie();"><img src="https://d3v4eglovri8yt.cloudfront.net/static/019b83797158fc0c/go/img/video_voice/btn_vb.png"></a></li>
-                <li><a class="gtm-ga-pageview-t2" id="voice-vendor-iw" target="_blank" href="https://www.inwhatlanguage.com/goanimate-translations/" data-gtmv-page="/pageTracker/voicebanner/InWhatLanguage" onclick="setvoicebannercookie();"><img src="https://d3v4eglovri8yt.cloudfront.net/static/019b83797158fc0c/go/img/video_voice/btn_iw.png"></a></li>
+                <li><a class="gtm-ga-pageview-t2" id="voice-vendor-vb" target="_blank" href="https://voicebunny.com/?p=vyond" data-gtmv-page="/pageTracker/voicebanner/VoiceBunny" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/477/go/img/video_voice/btn_vb.png"></a></li>
+                <li><a class="gtm-ga-pageview-t2" id="voice-vendor-vc" target="_blank" href="https://voices.com" data-gtmv-page="/pageTracker/voicebanner/Voices.com" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/477/go/img/video_voice/btn_vc.png"></a></li>
+		<li><a class="gtm-ga-pageview-t2" id="voice-vendor-sp" target="_blank" href="https://sitepal.com" data-gtmv-page="/pageTracker/voicebanner/SitePal" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/477/go/img/video_voice/btn_sp.png"></a></li>
                 <li>
                     <hr class="sperator">
                     <a class="voiceover-tips gtm-ga-pageview-t2" target="_blank" href="http://goanimate.com/video-maker-tips/tutorial-why-you-should-break-up-your-dialogue-audio-into-small-pieces-before-importing/" data-gtmv-page="/pageTracker/voicebanner/VoiceoverTips" onclick="setvoicebannercookie();"><span><i class="lightbulb"></i>Voiceover Tips &gt;</span></a>
@@ -875,8 +784,9 @@ ImporterFile.defaults.options.restricted_mime = ["font\/x-font-ttf","font\/vnd.m
         <div class="close"><a href="javascript:hideVoiceAdWidget()" onclick="javascript:return hideVoiceAdWidget()">×</a></div>
         <div id="studio-voice-vendor-container">
             <ul>
-                <li><a class="gtm-ga-pageview-t2" id="voice-vendor-vb" target="_blank" href="https://voicebunny.com/?p=vyond" data-gtmv-page="/pageTracker/voicebanner/VoiceBunny" onclick="setvoicebannercookie();"><img src="https://d3v4eglovri8yt.cloudfront.net/static/019b83797158fc0c/go/img/video_voice/btn_vb.png"></a></li>
-                <li><a class="gtm-ga-pageview-t2" id="voice-vendor-iw" target="_blank" href="https://www.inwhatlanguage.com/goanimate-translations/" data-gtmv-page="/pageTracker/voicebanner/InWhatLanguage" onclick="setvoicebannercookie();"><img src="https://d3v4eglovri8yt.cloudfront.net/static/019b83797158fc0c/go/img/video_voice/btn_iw.png"></a></li>
+                <li><a class="gtm-ga-pageview-t2" id="voice-vendor-vb" target="_blank" href="https://voicebunny.com/?p=vyond" data-gtmv-page="/pageTracker/voicebanner/VoiceBunny" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/477/go/img/video_voice/btn_vb.png"></a></li>
+                <li><a class="gtm-ga-pageview-t2" id="voice-vendor-vc" target="_blank" href="https://voices.com" data-gtmv-page="/pageTracker/voicebanner/Voices.com" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/477/go/img/video_voice/btn_vc.png"></a></li>
+		<li><a class="gtm-ga-pageview-t2" id="voice-vendor-sp" target="_blank" href="https://sitepal.com" data-gtmv-page="/pageTracker/voicebanner/SitePal" onclick="setvoicebannercookie();"><img src="https://josephcrosmanplays532.github.io/static/477/go/img/video_voice/btn_sp.png"></a></li>
                 <li>
                     <hr class="sperator">
                     <a class="voiceover-tips gtm-ga-pageview-t2" target="_blank" href="http://goanimate.com/video-maker-tips/tutorial-why-you-should-break-up-your-dialogue-audio-into-small-pieces-before-importing/" data-gtmv-page="/pageTracker/voicebanner/VoiceoverTips" onclick="setvoicebannercookie();"><span><i class="lightbulb"></i>Voiceover Tips &gt;</span></a>
