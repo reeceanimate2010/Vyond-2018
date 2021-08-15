@@ -53,6 +53,16 @@
 				"Content-Type": "text/html; charset=UTF-8"
 			}
 		},
+		"static/go/(.*)": {
+			"headers": {
+				"Content-Type": "text/js; charset=UTF-8"
+			}
+		},
+		"static/go/(.*)": {
+			"headers": {
+				"Content-Type": "text/css; charset=UTF-8"
+			}
+		},
 		"videomaker(.*)": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
