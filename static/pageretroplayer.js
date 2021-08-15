@@ -59,7 +59,7 @@ module.exports = function (req, res, url) {
 					ut: 60,
 					autostart: 1,
 					isWide: 1,
-					clientThemePath: "https://josephcrosmanplays532.github.io/static/146/<client_theme>",
+					clientThemePath: "https://josephcrosmanplays532.github.io/static/477/<client_theme>",
 					userId: "",
 					movieId: "",
 					chain_mids: "",
