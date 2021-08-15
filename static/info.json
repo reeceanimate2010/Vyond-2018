@@ -63,6 +63,21 @@
 				"Content-Type": "text/css; charset=UTF-8"
 			}
 		},
+		"static/go/(.*)(gif|GIF)$": {
+			"headers": {
+				"Content-Type": "image/gif; charset=UTF-8"
+			}
+		},
+		"static/go/(.*)(png|PNG)$": {
+			"headers": {
+				"Content-Type": "image/png; charset=UTF-8"
+			}
+		},
+		"static/go/(.*)(jpg|JPG)$": {
+			"headers": {
+				"Content-Type": "image/jpg; charset=UTF-8"
+			}
+		},
 		"videomaker(.*)": {
 			"headers": {
 				"Content-Type": "text/html; charset=UTF-8"
