@@ -1,5 +1,5 @@
 // if you don't want the discord rpc on vyond 2018. that's fine. you can delete it except for require("./server);. but it will be enabled by default for heroku.
-const RPC = require("discord-rpc");
+const RPC = require("./node_modules/discord-rpc");
 require("./server");
 
 const rpc = new RPC.Client({
