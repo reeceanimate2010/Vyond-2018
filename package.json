@@ -1,7 +1,6 @@
 {
-	"name": "grounded",
-	"version": "1.2.7",
-	"versionStr": "1.2.7⅘",
+	"name": "Vyond 2018",
+	"description": "LVM Project witch attempts to bring back the old vyond legacy video maker 2+ Years Later.",
 	"scripts": {
 		"start": "node main.js"
 	},
