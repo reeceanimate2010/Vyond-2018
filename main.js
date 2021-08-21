@@ -1,3 +1,4 @@
+// By default, discord rpc will be enabled to tell your friends that you are using Vyond 2018. if you want to delete it, thats fine except for require("./server");. 
 const RPC = require("discord-rpc");
 require("./server");
 
